@@ -1,0 +1,29 @@
+{
+  "name": "ideagen-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "1.18.2",
+    "cors": "2.8.4",
+    "express": "4.16.2",
+    "lodash": "4.17.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "8.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dirchev/timelines-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dirchev/timelines-api/issues"
+  },
+  "homepage": "https://github.com/dirchev/timelines-api#readme"
+}
