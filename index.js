@@ -15,4 +15,4 @@ require('./Timeline')(app, database)
 require('./TimelineEventLinks')(app, database)
 require('./Event')(app, database)
 
-app.listen(3001, () => console.log('Example app listening on port 3000!'))
+app.listen(process.env.port || 3001, () => console.log('Example app listening on port 3000!'))
