@@ -29,6 +29,10 @@ So, in order to use, instead of sending requests to `https://gcu.ideagen-develop
 * Delete Event
 * All of the Event Edit Endpoints
 
+* Link event to event
+* Unlink event to event
+* Get linked events to event
+
 ## But I want to run it locally, too!
 
 And you can totally do this. You just need NodeJS installed (I install it using [nvm](https://github.com/creationix/nvm)) and then:
@@ -47,6 +51,27 @@ npm run
 
 then the same server is available on `localhost:3001` or `127.0.0.1:3001`
 
+## Testing
+
+There is a full API test that can be run against this server or the official server. In order to run all tests, do:
+
+```
+npm test
+```
+
+### `config.json`
+
+The `config.json` file has the set up for the local server testing. However, it can be updated in order to run the tests against the official server.
+
+In order to do this, update `config.json` to:
+
+```
+{
+  "endpoint": "http://gcu.ideagen-development.com",
+  "TenantId": "INSERT TENANT ID",
+  "AuthToken": "INSERT AUTH TOKEN"
+}
+```
 
 ## I found a bug
 
