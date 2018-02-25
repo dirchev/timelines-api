@@ -44,13 +44,6 @@ module.exports = function (app, database) {
     res.json(res.body)
   })
 
-  app.put('/TimelineEvent/Delete', function (req, res, next) {
-    var event = _.remove(database.events, {Id: req.body.TimelineEventId})[0]
-    if (!event) return res.status(400).send({ error: 'event not found' });
-    res.body = event
-    res.json(res.body)
-  })
-
   app.put('/TimelineEvent/EditEventDateTime', function (req, res, next) {
     var event = _.find(database.events, {Id: req.body.TimelineEventId})
     if (!event) return res.status(400).send({ error: 'event not found' });
@@ -65,4 +58,11 @@ module.exports = function (app, database) {
     res.body = event
     res.json(res.body)
   })
+
+  app.put('/TimelineEvent/Delete', function (req, res, next) {
+    var event = _.remove(database.events, {Id: req.body.TimelineEventId})[0]
+    if (!event) return res.status(400).send({error: 'event not found'})
+    res.json('Successfully Deleted Timeline Event: ' + event.Id)
+  })
+
 }

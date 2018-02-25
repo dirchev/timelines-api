@@ -42,7 +42,6 @@ module.exports = function (app, database) {
   app.put('/Timeline/Delete', function (req, res, next) {
     var TimelineId = req.body.TimelineId
     var timeline = _.remove(database.timelines, {Id: TimelineId})[0]
-    res.body = timeline
-    res.json(res.body)
+    res.send('Deleted timeline ' + timeline.Id)
   })
 }
