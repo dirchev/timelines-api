@@ -2,6 +2,8 @@
 
 This is the same API, same functionality, only that it is implemented in nodejs and supports CORS
 
+[![Build Status](https://travis-ci.org/dirchev/timelines-api.svg?branch=master)](https://travis-ci.org/dirchev/timelines-api)
+
 ## How to use?
 
 I tried my best to have the same functionality as Ideagen's API, having the same request and response structure. The only difference is that the instead of storing things in a database (which I am too lazy to set up) everything in stored in runtime memory. **Yep, if you crash the server the database is cleared. However, it will be useful to crash it from time to time so that the runtime memory is cleared.**
